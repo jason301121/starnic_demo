@@ -9,7 +9,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:jason301121/starnicDemo.git master:gh-pages
+git push -f git@github.com:jason301121/demo.git main:gh-pages
 
 
 cd -
