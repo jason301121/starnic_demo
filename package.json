@@ -1,8 +1,11 @@
 {
   "name": "starnic",
+  "homepage": "https://jason301121.github.io/starnicDemo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
@@ -10,6 +13,7 @@
     "@popperjs/core": "^2.11.5",
     "bootstrap-icons": "^1.8.3",
     "core-js": "^3.6.5",
+    "gh-pages": "^4.0.0",
     "vue": "^2.6.11",
     "vue-clamp": "^0.4.0",
     "vue-router": "^3.2.0",
