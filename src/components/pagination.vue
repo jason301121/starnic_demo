@@ -7,9 +7,9 @@
             <span class="d-flex align-items-center" aria-hidden="true"><img class="pe-2" src="@/assets/image/double_arrow_left.svg" alt=""> 上一頁</span>
           </a>
         </li>
-        <li class="page-item"><a class="page-link " href="#">1</a></li>
+        <li class="page-item"><a class="page-link active" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link active" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Next">
             <span class="d-flex align-items-center" aria-hidden="true">下一頁 <img class="ps-2" src="@/assets/image/double_arrow_right.svg" alt=""></span>
