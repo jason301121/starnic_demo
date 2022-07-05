@@ -184,11 +184,12 @@
         <div class="row align-items-center">
           <div class="col-2 col-md-1 px-0"><img class="store_logo" :src="require(`@/assets/image/store_star.svg`)" alt=""></div>
           <div class="col-10 col-md-11 d-flex flex-column text-start pe-0 position-relative">
-            <v-clamp :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">星和醫美台北店
-              <template class="collapse-toggle" #after="{ clamped,expanded,toggle }">
+            <v-clamp v-if="screenWidth < 768" :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">星和醫美台北店
+              <template  class="collapse-toggle" #after="{ clamped,expanded,toggle }">
                 <button class="position-absolute top-0 end-0" v-if="clamped || expanded" @click="toggle()"><img src="@/assets/image/arrow_down.svg" alt=""></button>
               </template>
             </v-clamp>
+            <span v-else class="store_name pe-5">星和醫美台北店</span>
           </div>
         </div>
         <div class="row align-items-center">
@@ -214,11 +215,12 @@
         <div class="row align-items-center">
           <div class="col-2 col-md-1 px-0"><img class="store_logo" :src="require(`@/assets/image/store_star.svg`)" alt=""></div>
           <div class="col-10 col-md-11 d-flex flex-column text-start pe-0 position-relative">
-            <v-clamp :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">星和醫美台北店
-              <template class="collapse-toggle" #after="{ clamped,expanded,toggle }">
+            <v-clamp v-if="screenWidth < 768" :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">星和醫美台北店
+              <template  class="collapse-toggle" #after="{ clamped,expanded,toggle }">
                 <button class="position-absolute top-0 end-0" v-if="clamped || expanded" @click="toggle()"><img src="@/assets/image/arrow_down.svg" alt=""></button>
               </template>
             </v-clamp>
+            <span v-else class="store_name pe-5">星和醫美台北店</span>
           </div>
         </div>
         <div class="row align-items-center">
