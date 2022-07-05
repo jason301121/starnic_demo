@@ -4,12 +4,13 @@
       <div v-for="(item,index) in storeList" :key="index" class="store_box py-4">
         <div class="row">
           <div class="col-2 col-md-1 px-0"><img class="store_logo" :src="require(`@/assets/image/store_${item.logo}.svg`)" alt=""></div>
-          <div class="col-10 col-md-11 d-flex flex-column text-start pe-0 position-relative">
-            <v-clamp :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">{{ item.name }}
-              <template class="collapse-toggle" #after="{ clamped,expanded,toggle }">
+          <div class="col-10 col-md-5 d-flex flex-column text-start pe-0 position-relative">
+            <v-clamp v-if="screenWidth < 768" :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">{{ item.name }}
+              <template  class="collapse-toggle" #after="{ clamped,expanded,toggle }">
                 <button class="position-absolute top-0 end-0" v-if="clamped || expanded" @click="toggle()"><img src="@/assets/image/arrow_down.svg" alt=""></button>
               </template>
             </v-clamp>
+            <span v-else class="store_name pe-5">{{ item.name }}</span>
             <span class="store_address pt-2">{{ item.address }}</span>
           </div>
         </div>
@@ -39,7 +40,7 @@
                   <span class="views_label">已增加評論數</span>
                 </div>
                 <div class="d-flex flex-column">
-                  <span class="views_number">{{ item.viewsInfo.rate }}</span>
+                  <span class="views_number">{{ item.viewsInfo.rate }}<span class="text-18">%</span></span>
                   <span class="views_label">執行率</span>
                 </div>
               </div>
@@ -76,6 +77,103 @@
             </div>
           </div>
           <div v-else class="col-12 col-md-2 program d-flex px-2">
+            <button class="w-100 btn_program_join">選取方案</button>
+          </div>
+        </div>
+      </div>
+      <div class="store_box py-4">
+        <div class="row">
+          <div class="col-2 col-md-1 px-0"><img class="store_logo" :src="require(`@/assets/image/store_bubble.svg`)" alt=""></div>
+          <div class="col-10 col-md-5 d-flex flex-column text-start pe-0 position-relative">
+            <v-clamp v-if="screenWidth < 768" :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">波諦波諦鮮做飲料-人氣天然健康手搖飲品店(可外送)大同區飲料/大...
+              <template  class="collapse-toggle" #after="{ clamped,expanded,toggle }">
+                <button class="position-absolute top-0 end-0" v-if="clamped || expanded" @click="toggle()"><img src="@/assets/image/arrow_down.svg" alt=""></button>
+              </template>
+            </v-clamp>
+            <span v-else class="store_name pe-5">波諦波諦鮮做飲料-人氣天然健康手搖飲品店(可外送)大同區飲料/大...</span>
+            <span class="store_address pt-2">台北市重慶南路77號12樓</span>
+          </div>
+        </div>
+        <div class="row d-flex flex-column flex-md-row align-items-center justify-content-between py-1">
+          <div class="d-none d-md-block col-md-1"></div>
+          <div class="col-12 col-md-9 store_status">
+            <div class="col-md-12 d-flex flex-column flex-md-row align-items-center ">
+              <div class="col-12 col-md-5 d-flex justify-content-start justify-content-md-between align-items-center notActive text-start">
+                <span class="label">商家中心</span>
+                <span class="date text-start">尚未購買</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-2 program d-flex px-2">
+            <button class="w-100 btn_program_join">選取方案</button>
+          </div>
+        </div>
+        <div class="row d-flex flex-column flex-md-row align-items-center justify-content-between py-1">
+          <div class="col-1 d-none d-md-block"></div>
+          <div class="col-12 col-md-9 store_status">
+            <div class="col-12 col-md-5 d-flex justify-content-start justify-content-md-between align-items-center inTime">
+              <span class="label">評價中心</span>
+              <span class="date text-start">2020.1.1 - 2021.1.1</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-2 program d-flex px-2">
+          </div>
+        </div>
+      </div>
+      <div class="store_box py-4">
+        <div class="row">
+          <div class="col-2 col-md-1 px-0"><img class="store_logo" :src="require(`@/assets/image/store_bubble.svg`)" alt=""></div>
+          <div class="col-10 col-md-5 d-flex flex-column text-start pe-0 position-relative">
+            <v-clamp v-if="screenWidth < 768" :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">波諦波諦鮮做飲料-人氣天然健康手搖飲品店(可外送)大同區飲料/大...
+              <template  class="collapse-toggle" #after="{ clamped,expanded,toggle }">
+                <button class="position-absolute top-0 end-0" v-if="clamped || expanded" @click="toggle()"><img src="@/assets/image/arrow_down.svg" alt=""></button>
+              </template>
+            </v-clamp>
+            <span v-else class="store_name pe-5">波諦波諦鮮做飲料-人氣天然健康手搖飲品店(可外送)大同區飲料/大...</span>
+            <span class="store_address pt-2">台北市重慶南路77號12樓</span>
+          </div>
+        </div>
+        <div class="row d-flex flex-column flex-md-row align-items-center justify-content-between py-1">
+          <div class="d-none d-md-block col-md-1"></div>
+          <div class="col-12 col-md-9 store_status">
+            <div class="col-md-12 d-flex flex-column flex-md-row align-items-center ">
+              <div class="col-12 col-md-5 d-flex justify-content-start justify-content-md-between align-items-center text-start inTime">
+                <span class="label">商家中心 一般版</span>
+                <span class="date text-start">2020.1.1 - 2021.1.1</span>
+              </div>
+              <div class="col-12 col-md-7 d-flex justify-content-around" >
+                <div class="d-flex flex-column">
+                  <span class="views_number">2</span>
+                  <span class="views_label">評論起始值</span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="views_number">200</span>
+                  <span class="views_label">評論當前值</span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="views_number">198</span>
+                  <span class="views_label">已增加評論數</span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="views_number">60<span class="text-18">%</span></span>
+                  <span class="views_label">執行率</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-2 program d-flex px-2">
+            <button class="w-100 btn_program_inTime">取得QRcode</button>
+          </div>
+        </div>
+        <div class="row d-flex flex-column flex-md-row align-items-center justify-content-between py-1">
+          <div class="col-1 d-none d-md-block"></div>
+          <div class="col-12 col-md-9 store_status">
+            <div class="col-12 col-md-5 d-flex justify-content-start justify-content-md-between align-items-center notActive">
+              <span class="label">評價中心</span>
+              <span class="date text-start">尚未購買</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-2 program d-flex px-2">
             <button class="w-100 btn_program_join">選取方案</button>
           </div>
         </div>
@@ -143,6 +241,7 @@ export default {
   props:['IsExecute'],
   data() {
     return {
+      screenWidth:document.body.clientWidth,
       storeList:[
         {
           logo:'star',
@@ -186,53 +285,68 @@ export default {
             rate:60
           }
         },
-        {
-          logo:'bubble',
-          name:'波諦波諦鮮做飲料-人氣天然健康手搖飲品店(可外送)大同區飲料/大...',
-          address:'台北市重慶南路77號12樓',
-          IsPro:false,
-          storeCenter:{
-            status:false,
-            startAt:'2020-01-01',
-            endAt:'2021-01-01'
-          },
-          viewCenter:{
-            status:true,
-            startAt:'2020-01-01',
-            endAt:'2021-01-01'
-          },
-          viewsInfo:{
-            start:2,
-            total:200,
-            rate:60
-          }
-        },
-                {
-          logo:'bubble',
-          name:'波諦波諦鮮做飲料-人氣天然健康手搖飲品店(可外送)大同區飲料/大...',
-          address:'台北市重慶南路77號12樓',
-          IsPro:false,
-          storeCenter:{
-            status:true,
-            startAt:'2020-01-01',
-            endAt:'2021-01-01'
-          },
-          viewCenter:{
-            status:false,
-            startAt:'2020-01-01',
-            endAt:'2021-01-01'
-          },
-          viewsInfo:{
-            start:2,
-            total:200,
-            rate:60
-          }
-        }
+        // {
+        //   logo:'bubble',
+        //   name:'波諦波諦鮮做飲料-人氣天然健康手搖飲品店(可外送)大同區飲料/大...',
+        //   address:'台北市重慶南路77號12樓',
+        //   IsPro:false,
+        //   storeCenter:{
+        //     status:false,
+        //     startAt:'2020-01-01',
+        //     endAt:'2021-01-01'
+        //   },
+        //   viewCenter:{
+        //     status:true,
+        //     startAt:'2020-01-01',
+        //     endAt:'2021-01-01'
+        //   },
+        //   viewsInfo:{
+        //     start:2,
+        //     total:200,
+        //     rate:60
+        //   }
+        // },
+        // {
+        //   logo:'bubble',
+        //   name:'波諦波諦鮮做飲料-人氣天然健康手搖飲品店(可外送)大同區飲料/大...',
+        //   address:'台北市重慶南路77號12樓',
+        //   IsPro:false,
+        //   storeCenter:{
+        //     status:true,
+        //     startAt:'2020-01-01',
+        //     endAt:'2021-01-01'
+        //   },
+        //   viewCenter:{
+        //     status:false,
+        //     startAt:'2020-01-01',
+        //     endAt:'2021-01-01'
+        //   },
+        //   viewsInfo:{
+        //     start:2,
+        //     total:200,
+        //     rate:60
+        //   }
+        // }
       ],
-      width:0
     }
   },
-
+  mounted() {
+    const that = this
+    window.addEventListener("resize", function() {
+      return (() => {
+        window.screenWidth= document.body.clientWidth;
+        that.screenWidth= window.screenWidth;
+      })();
+    });
+  },
+  watch:{
+    screenWidth:{
+      immediate:true,
+      handler(){
+        console.log(this.screenWidth);
+      }
+    }
+  }
 }
 </script>
 

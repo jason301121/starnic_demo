@@ -6,7 +6,7 @@
           <span class="text-21">我的商家</span>
         </div>
         <div class="d-md-none my-2" style="border-bottom: 2px solid #D8B93B;"></div>
-        <div class="col-12 col-md-9 d-flex justify-content-center justify-content-md-end px-0">
+        <div class="col-12 col-md-9 d-flex justify-content-around justify-content-md-end px-0">
           <button class="btn-applyStore d-flex align-items-center"><img src="@/assets/image/google-maps.svg" alt=""><span class="ps-1">申請Google商家</span></button>
           <button class="btn-applyStore d-flex align-items-center"><img src="@/assets/image/add_shop.svg" alt=""><span class="ps-1">商家登錄</span></button>
         </div>
@@ -67,7 +67,7 @@
         <div class=" toolBar_filter d-flex px-0" style="white-space: nowrap;">
           <div class="d-none d-md-block col-1 text-14 text-start px-0" >共 10 筆商家</div>
           <div class="col-12 col-md-11 d-flex justify-content-between justify-content-md-end px-0">
-            <div class="w-100 px-0 d-flex justify-content-start justify-content-sm-around justify-content-md-end overflow-scroll">
+            <div class="w-100 px-0 d-flex justify-content-start justify-content-sm-around justify-content-md-end overflow-auto">
               <button class="btn_toolBar_filter me-2">執行率 <i class="bi bi-arrow-up-short"></i> </button>
               <button class="btn_toolBar_filter me-2">增加評論數 <i class="bi bi-arrow-up-short"></i> </button>
               <button class="btn_toolBar_filter me-2">評論當前數 <i class="bi bi-arrow-up-short"></i> </button>
