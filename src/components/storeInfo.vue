@@ -183,12 +183,17 @@
       <div class="store_box py-4">
         <div class="row align-items-center">
           <div class="col-2 col-md-1 px-0"><img class="store_logo" :src="require(`@/assets/image/store_star.svg`)" alt=""></div>
-          <div class="col-10 col-md-9 d-flex flex-column text-start pe-0 position-relative">
+          <div class="col-10 col-md-11 d-flex flex-column text-start pe-0 position-relative">
             <v-clamp :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">星和醫美台北店
               <template class="collapse-toggle" #after="{ clamped,expanded,toggle }">
                 <button class="position-absolute top-0 end-0" v-if="clamped || expanded" @click="toggle()"><img src="@/assets/image/arrow_down.svg" alt=""></button>
               </template>
             </v-clamp>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 px-0"></div>
+          <div class="col-9 d-flex flex-column">
             <div class="d-flex flex-column justify-content-start align-items-start inTime">
               <span class="label px-2">專業版</span>
             </div>
@@ -208,12 +213,17 @@
       <div class="store_box py-4">
         <div class="row align-items-center">
           <div class="col-2 col-md-1 px-0"><img class="store_logo" :src="require(`@/assets/image/store_star.svg`)" alt=""></div>
-          <div class="col-10 col-md-9 d-flex flex-column text-start pe-0 position-relative">
+          <div class="col-10 col-md-11 d-flex flex-column text-start pe-0 position-relative">
             <v-clamp :autoresize="true" :max-lines="1" :expanded="false" class="store_name pe-5">星和醫美台北店
               <template class="collapse-toggle" #after="{ clamped,expanded,toggle }">
                 <button class="position-absolute top-0 end-0" v-if="clamped || expanded" @click="toggle()"><img src="@/assets/image/arrow_down.svg" alt=""></button>
               </template>
             </v-clamp>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 px-0"></div>
+          <div class="col-9 d-flex flex-column">
             <div class="d-flex flex-column justify-content-start align-items-start inTime">
               <span class="label px-2">評價中心</span>
             </div>
